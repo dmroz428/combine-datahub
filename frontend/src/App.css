@@ -1,0 +1,36 @@
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-y:'auto';
+  align-items: center;
+  text-align: center;;
+}
+.exo-2-title{
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.75em
+}
+.exo-2-cap{
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1em
+}
+.text{
+  color: #32a852;
+}
+body{
+  background-color: #14342B;
+}
+.chartgroup{
+  background: rgba(224, 224, 170, .80);
+  border-radius: 13px;
+  padding: 10px;
+  margin-top: 40px;
+  width: 74em;
+}
