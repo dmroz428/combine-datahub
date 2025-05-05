@@ -3,6 +3,8 @@ import vegaEmbed from "vega-embed";
 import Chart from './Chart';
 import './App.css';
 
+
+const API_URL = "https://combine-datahub.onrender.com";
 function App() {
   //const [message, setMessage] = useState("");
   const [position, setPosition] = useState('OT');
@@ -23,17 +25,20 @@ function App() {
   }, [data]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/scatters")
+    // fetch("http://localhost:5000/api/scatters")
+    fetch(`${API_URL}/api/scatters`)
       .then((res) => res.json())
       .then((data) => {
         vegaEmbed("#vis", JSON.parse(data.message));
       });
-      fetch("http://localhost:5000/api/brush")
+      // fetch("http://localhost:5000/api/brush")
+      fetch(`${API_URL}/api/brush`)
       .then((res) => res.json())
       .then((data) => {
         vegaEmbed("#vis2", JSON.parse(data.message));
       });
-      fetch("http://localhost:5000/api/dataload")
+      // fetch("http://localhost:5000/api/dataload")
+      fetch(`${API_URL}/api/dataload`)
       .then((res) => res.json())
       .then((res) => {
         // console.log("Response data:", res);
